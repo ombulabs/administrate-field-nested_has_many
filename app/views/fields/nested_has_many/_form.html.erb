@@ -1,4 +1,4 @@
-<div class="nested-fields" style="width: 40%; margin-left: 20%;">
+<div class="nested-fields" style="width: 100%;">
 
   <%= f.fields_for field.association_name do |nested_form| %>
     <%= render(
@@ -18,6 +18,7 @@
       field.association_name,
       partial: "fields/nested_has_many/fields",
       render_options: { locals: { field: field } },
+      style: "margin-left: 8%;"
     ) %>
   </div>
 </div>
