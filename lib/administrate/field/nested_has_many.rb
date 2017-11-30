@@ -32,7 +32,7 @@ module Administrate
           dashboard_for_resource(associated_resource).new.permitted_attributes
       end
 
-      def self.permitted_attribute(associated_resource)
+      def self.permitted_attribute(associated_resource, options)
         {
           "#{associated_resource}_attributes".to_sym =>
           associated_attributes(associated_resource),
